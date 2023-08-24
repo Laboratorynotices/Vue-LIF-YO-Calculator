@@ -1,46 +1,36 @@
-# vue-lif-yo-calculator
+# Эксперименты Vue 3 с Firebase
+Под кулисами калькулятора качества при производстве к игре LIF YO продолжаю разбираться с [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org) и прочее. Может быть даже подключусь к [Firebase](https://firebase.google.com/) и сделаю авторизацию при помощи её.
 
-This template should help get you started developing with Vue 3 in Vite.
+[Основная страница проекта](https://laboratorynotices.wordpress.com/2023/08/24/vue-3-%d0%ba%d0%b0%d0%bb%d1%8c%d0%ba%d1%83%d0%bb%d1%8f%d1%82%d0%be%d1%80-%d0%ba%d0%b0%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b0-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%b0/).
 
-## Recommended IDE Setup
+[Демонстрация проекта](https://laboratorynotices.github.io/Vue-LIF-YO-Calculator/).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Так же постараюсь придерживаться [соглашению о коммитах](https://www.conventionalcommits.org), по крайней мере, как я это буду понимать.
 
-## Type Support for `.vue` Imports in TS
+## Краткий список команд
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
+запуск виртуального сервера для разработки:
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
+сборка версии для продукции:
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+запуск уже собранной (build) версии:
+```sh
+npm run preview
+```
 
+Но, чтобы открыть доступ к виртуальному серверу по сети надо добавить суффикс «-- --host». Т.е. для разработки и теста по сети буду использовать:
+
+```sh
+npm run dev -- --host
+```
+
+Обработка Lint
 ```sh
 npm run lint
 ```
