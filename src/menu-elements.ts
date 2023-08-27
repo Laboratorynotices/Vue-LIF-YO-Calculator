@@ -8,7 +8,7 @@ const menuElements: Array<MenuAndRouteElement> = [
   {
     path: "/",
     name: "qualityCalculator",
-    component: () => import("@/views/QualityCalculatorView.vue"),
+    component: () => import("@/views/QualityCalculator.vue"),
     meta: { title: "qualityCalculator" },
     nameMenu: "qualityCalculator",
     showInMenu: true,
