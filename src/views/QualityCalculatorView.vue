@@ -20,7 +20,14 @@ import recipesAll from "@/recipes.json";
           </v-card-item>
 
           <v-card-text>
-            {{ recipe }}
+            <v-list>
+              <v-list-item
+                v-for="(materialData, materialName, materialIndex) in recipe['Materials']"
+                :key="materialIndex"
+              >
+                {{ materialName }}: {{ materialData }}
+              </v-list-item>
+            </v-list>
           </v-card-text>
         </v-card>
       </v-expansion-panel-text>
