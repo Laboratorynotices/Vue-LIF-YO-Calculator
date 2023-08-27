@@ -24,7 +24,7 @@ export type MenuAndRouteElement = RouteRecordRaw & RouterLink;
 /***************************/
 
 /**
- * Структура данных отдельного ингридиента для рецепта 
+ * Структура данных отдельного ингридиента (материала) для рецепта 
  */
 export interface Material {
   // Название ингридиента
@@ -33,4 +33,14 @@ export interface Material {
   "quantity": number,
   // Вес ингридиента при подсчёте качества
   "weight": number
+}
+
+/**
+ * Структура данных отдельного рецепта 
+ */
+export interface Recipe {
+  // Название продукции
+  "name": string,
+  // Список материалов
+  "materials": Material[]
 }

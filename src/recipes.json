@@ -1,5 +1,15 @@
 {
-  "name": "Branch",
-  "quantity": 1,
-  "weight": 10
+  "name": "Mortar and pestle",
+  "materials": [
+    {
+      "name": "Branch",
+      "quantity": 1,
+      "weight": 10
+    },
+    {
+      "name": "Rock",
+      "quantity": 1,
+      "weight": 10
+    }
+  ]
 }
