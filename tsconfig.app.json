@@ -4,7 +4,8 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "src/i18n/locales/*.json"
+    "src/i18n/locales/*.json",
+    "src/recipes.json"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
