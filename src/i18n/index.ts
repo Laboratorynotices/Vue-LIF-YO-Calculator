@@ -19,11 +19,11 @@ export const i18n = createI18n({
   // Будем использовать Composition API
   legacy: false,
   // Язык по умолчанию
-  locale: "ru",
+  locale: import.meta.env.VITE_I18N_DEFAULT_LOCALE,
   /* По умолчанию буду использовать английский язык,
    * если передали ненастроенный язык.
    */
-  fallbackLocale: "en",
+  fallbackLocale: import.meta.env.VITE_I18N_FALLBACK_LOCALE,
   /* Автодобавление глобальной переменной $t
    * во все файлы.
    */
