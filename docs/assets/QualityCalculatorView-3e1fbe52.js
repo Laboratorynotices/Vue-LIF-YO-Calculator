@@ -1,0 +1,1 @@
+import{d as r,o as e,c as n,r as i,u as l,F as p,t,a as m}from"./index-219bbcd9.js";const f="Branch",y=1,h=10,d={name:f,quantity:y,weight:h},g=r({__name:"QualityCalculator",setup(c){return(s,o)=>(e(!0),n(p,null,i(l(d),(u,_,a)=>(e(),n("p",{key:a},t(a)+". "+t(_)+" = "+t(u),1))),128))}}),B=r({__name:"QualityCalculatorView",setup(c){return(s,o)=>(e(),m(g))}});export{B as default};

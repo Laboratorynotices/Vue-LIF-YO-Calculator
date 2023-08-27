@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import QualityCalculator from "@/components/QualityCalculator.vue";
+</script>
+
 <template>
-  QualityCalculator
+  <quality-calculator></quality-calculator>
 </template>
