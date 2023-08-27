@@ -1,4 +1,4 @@
-# Эксперименты Vue 3 с Firebase
+# Калькулятор качества продуктов при производстве в LIF YO
 Под кулисами калькулятора качества при производстве к игре LIF YO продолжаю разбираться с [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org) и прочее. Может быть даже подключусь к [Firebase](https://firebase.google.com/) и сделаю авторизацию при помощи её.
 
 [Основная страница проекта](https://laboratorynotices.wordpress.com/2023/08/24/vue-3-%d0%ba%d0%b0%d0%bb%d1%8c%d0%ba%d1%83%d0%bb%d1%8f%d1%82%d0%be%d1%80-%d0%ba%d0%b0%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b0-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%b0/).
