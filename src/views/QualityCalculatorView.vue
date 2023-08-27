@@ -10,7 +10,19 @@ import recipesAll from "@/recipes.json";
       :title="skillName"
     >
       <v-expansion-panel-text>
-        {{ recipesBySkill }}
+        <v-card
+          v-for="(recipe, product, recipeIndex) in recipesBySkill"
+          :key="recipeIndex"
+          class="my-3"
+        >
+          <v-card-item>
+            <v-card-title>{{ product }}</v-card-title>
+          </v-card-item>
+
+          <v-card-text>
+            {{ recipe }}
+          </v-card-text>
+        </v-card>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
