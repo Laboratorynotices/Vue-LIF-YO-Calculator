@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import recipes from "@/recipes.json";
-
-console.log(recipes);
+import recipesAll from "@/recipes.json";
 </script>
 
 <template>
-  QualityCalculator
+  <v-expansion-panels variant="accordion">
+    <v-expansion-panel
+      v-for="(recipesBySkill, skillName, skillIndex) in recipesAll"
+      :key="skillIndex"
+      :title="skillName"
+    >
+      <v-expansion-panel-text>
+        {{ recipesBySkill }}
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+  </v-expansion-panels>
 </template>
