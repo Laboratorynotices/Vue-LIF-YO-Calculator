@@ -7,6 +7,14 @@ import type { MenuAndRouteElement, RouterLink } from "./types";
 const menuElements: Array<MenuAndRouteElement> = [
   {
     path: "/",
+    name: "qualityCalculator",
+    component: () => import("@/views/QualityCalculator.vue"),
+    meta: { title: "qualityCalculator" },
+    nameMenu: "qualityCalculator",
+    showInMenu: true,
+  },
+  {
+    path: "/home",
     name: "home",
     component: () => import("@/views/HomeView.vue"),
     meta: { title: "Home" },
@@ -20,6 +28,7 @@ const menuElements: Array<MenuAndRouteElement> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import("@/views/AboutView.vue"),
+    meta: { title: "About" },
     nameMenu: "About",
     showInMenu: true,
   },

@@ -26,3 +26,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# папка .Trash (удалённые файлы при Samba-сервере)
+/.Trash*
