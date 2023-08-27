@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import { navElements } from '@/menu-elements';
+import { RouterView } from "vue-router";
+import MainNav from "@/layouts/constrained/MainNav.vue";
 import DummyComponent from "@/components/DummyComponent.vue";
-
-const links = [
-  'Dashboard',
-  'Messages',
-  'Profile',
-  'Updates',
-];
 </script>
 
 <template>
@@ -21,18 +14,7 @@ const links = [
           size="32"
         ></v-avatar>
 
-        <router-link
-          v-for="(navElement, i) in navElements"
-          :key="i"
-          :to="navElement.path"
-        >{{ navElement.nameMenu }}</router-link>
-
-        <v-btn
-          v-for="link in links"
-          :key="link"
-          :text="link"
-          variant="text"
-        ></v-btn>
+        <main-nav></main-nav>
 
         <v-spacer></v-spacer>
   
