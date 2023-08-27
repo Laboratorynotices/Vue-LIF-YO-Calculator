@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import { navElements } from '@/menu-elements';
+import DummyComponent from "@/components/DummyComponent.vue";
 
 </script>
 
@@ -25,4 +26,5 @@ import { navElements } from '@/menu-elements';
   </header>
 
   <RouterView />
+  <dummy-component></dummy-component>
 </template>
