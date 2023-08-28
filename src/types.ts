@@ -44,3 +44,13 @@ export interface Recipe {
   // Список материалов
   "materials": Material[]
 }
+
+/**
+ * Структура данных отдельного навыка 
+ */
+export interface Skill {
+  // Название навыка
+  "name": string,
+  // Список рецептов
+  "recipes": Recipe[]
+}
