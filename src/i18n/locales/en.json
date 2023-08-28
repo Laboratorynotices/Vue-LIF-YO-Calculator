@@ -1,8 +1,19 @@
 {
   "hello": "hello world",
+  "Level of clothing": "Level of clothing",
+  "Level of item": "Level of item",
+  "Level of skill": "Level of skill",
   "game": {
     "Artian": "Artian",
     "Branch": "Branch",
-    "Mortar and pestle": "Mortar and pestle"
+    "Clay": "Clay",
+    "Construction": "Construction",
+    "Furnace": "Furnace",
+    "Mortar and pestle": "Mortar and pestle",
+    "Plant fiber": "Plant fiber",
+    "Primitive Crucible and Stick": "Primitive Crucible and Stick",
+    "Primitive Fishing Pole": "Primitive Fishing Pole",
+    "Rock": "Rock",
+    "Water": "Water"
   }
 }

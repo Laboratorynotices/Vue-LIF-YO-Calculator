@@ -1,8 +1,19 @@
 {
   "hello": "Привет",
+  "Level of clothing": "Уровень одежды",
+  "Level of item": "Уровень предмета",
+  "Level of skill": "Уровень навыка",
   "game": {
     "Artisan": "Ремёсла",
     "Branch": "Ветка",
-    "Mortar and pestle": "Ступка с пестиком"
+    "Clay": "Глина",
+    "Construction": "Строительсво",
+    "Furnace": "Плавильная печь",
+    "Mortar and pestle": "Ступка с пестиком",
+    "Plant fiber": "Растительные волокна",
+    "Primitive Crucible and Stick": "Примитивный тигель и палка",
+    "Primitive Fishing Pole": "Примитивная удочка",
+    "Rock": "Камень",
+    "Water": "Вода"
   }
 }
