@@ -1,50 +1,77 @@
-{
-  "name": "Artisan",
-  "recipes": [
-    {
-      "name": "Mortar and pestle",
-      "materials": [
-        {
-          "name": "Branch",
-          "quantity": 1,
-          "weight": 10
-        },
-        {
-          "name": "Rock",
-          "quantity": 1,
-          "weight": 10
-        }
-      ]
-    },
-    {
-      "name": "Primitive Crucible and Stick",
-      "materials": [
-        {
-          "name": "Rock",
-          "quantity": 2,
-          "weight": 10
-        },
-        {
-          "name": "Branch",
-          "quantity": 1,
-          "weight": 10
-        }
-      ]
-    },
-    {
-      "name": "Primitive Fishing Pole",
-      "materials": [
-        {
-          "name": "Branch",
-          "quantity": 1,
-          "weight": 10
-        },
-        {
-          "name": "Plant fiber",
-          "quantity": 2,
-          "weight": 10
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Artisan",
+    "recipes": [
+      {
+        "name": "Mortar and pestle",
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Rock",
+            "quantity": 1,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "name": "Primitive Crucible and Stick",
+        "materials": [
+          {
+            "name": "Rock",
+            "quantity": 2,
+            "weight": 10
+          },
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "name": "Primitive Fishing Pole",
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 2,
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Construction",
+    "recipes": [
+      {
+        "name": "Furnace",
+        "materials": [
+          {
+            "name": "Plant fiber",
+            "quantity": 10,
+            "weight": 10
+          },
+          {
+            "name": "Clay",
+            "quantity": 60,
+            "weight": 10
+          },
+          {
+            "name": "Water",
+            "quantity": 25,
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  }
+]
