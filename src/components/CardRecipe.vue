@@ -4,10 +4,15 @@ import ShowMaterialInfo from "./ShowMaterialInfo.vue"
 
 // Данные, теперь получаем от "родительского" элемента
 const props = defineProps({
+  // Рецепт
   recipe: {
     // Хитрый приём, чтобы определить тип (а не интерфейс) переменной
     type: Object as () => Recipe
-  }
+  },
+  // Уровень навыка
+  skillLevel: Number,
+  // Уровень профессиональной одежды
+  clothingLevel: Number
 });
 </script>
 
@@ -20,7 +25,7 @@ const props = defineProps({
         {{
           // @ts-ignore
           $t("game."+props.recipe?.name)
-        }}
+        }} {{ props.skillLevel }} {{ props.clothingLevel }}
       </v-card-title>
     </v-card-item>
 
