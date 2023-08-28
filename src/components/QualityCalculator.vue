@@ -1,25 +1,13 @@
 <script setup lang="ts">
 import type { Recipe } from "@/types";
-import importedRecipe from "@/recipes.json";
-import ShowMaterialInfo from "./ShowMaterialInfo.vue"
-
-const recipe = importedRecipe as Recipe;
+import importedRecipes from "@/recipes.json";
+import CardRecipe from "./CardRecipe.vue";
 </script>
 
 <template>
-  <v-card
-    class="my-3"
-  >
-    <v-card-item>
-      <v-card-title>{{ recipe.name }}</v-card-title>
-    </v-card-item>
-
-    <v-card-text>
-      <show-material-info
-        v-for="(material, index) in recipe.materials"
-        :key="index"
-        :material="material"
-      ></show-material-info>
-    </v-card-text>
-  </v-card>
+  <card-recipe
+    v-for="(recipe, index) in (importedRecipes as Recipe[])"
+    :key="index"
+    :recipe="recipe"
+  ></card-recipe>
 </template>
