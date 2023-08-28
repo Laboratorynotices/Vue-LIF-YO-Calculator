@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Recipe } from "@/types";
 import ShowMaterialInfo from "./ShowMaterialInfo.vue"
+import { computed, ref, type Ref } from "vue";
 
 // Данные, теперь получаем от "родительского" элемента
 const props = defineProps({
@@ -14,6 +15,36 @@ const props = defineProps({
   // Уровень профессиональной одежды
   clothingLevel: Number
 });
+
+/**
+ * Хранилище для весов компонентов
+ */
+const weightedSummands: Ref<number[]> = ref([]);
+
+/**
+ * Вес самого навыка.
+ * Высчитывается, как остаток после остальных весов.
+ */
+const skillweight = computed((): number => {
+  // Результат будет остаток от 100 после вычитания остальных весов
+  let skillweight = 100;
+  // Проходимся по каждому элементу в списке весов
+  weightedSummands.value.map((summand) => {
+    // Отнимаем очередной элемент от результата
+    skillweight -= summand;
+  });
+  // Возвращаем остаток
+  return skillweight;
+});
+
+/**
+ * Обновляет один из весов компонентов
+ * @param weight новое значение веса
+ * @param index индекс в списке весов
+ */
+const updateWeight = (weight: number, index: number): void => {
+  weightedSummands.value[index] = weight;
+};
 </script>
 
 <template>
@@ -25,7 +56,7 @@ const props = defineProps({
         {{
           // @ts-ignore
           $t("game."+props.recipe?.name)
-        }} {{ props.skillLevel }} {{ props.clothingLevel }}
+        }} {{ skillweight }} {{ props.skillLevel }} {{ props.clothingLevel }}
       </v-card-title>
     </v-card-item>
 
@@ -35,6 +66,7 @@ const props = defineProps({
         :key="index"
         :index="index"
         :material="material"
+        @returnWeigt="updateWeight"
       ></show-material-info>
     </v-card-text>
   </v-card>
