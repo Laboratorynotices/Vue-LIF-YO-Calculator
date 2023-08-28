@@ -1,3 +1,8 @@
 {
-  "hello": "Привет"
+  "hello": "Привет",
+  "game": {
+    "Artisan": "Ремёсла",
+    "Branch": "Ветка",
+    "Mortar and pestle": "Ступка с пестиком"
+  }
 }

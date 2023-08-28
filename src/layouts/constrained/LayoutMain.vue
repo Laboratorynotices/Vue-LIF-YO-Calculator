@@ -23,12 +23,6 @@ import DummyComponent from "@/components/DummyComponent.vue";
               <!--  -->
               <RouterView />
               <dummy-component></dummy-component>
-              <div class="bg-green pa-2">
-                {{
-                  // @ts-ignore
-                  $t("hello")
-                }}
-              </div>
             </v-sheet>
           </v-col>
         </v-row>

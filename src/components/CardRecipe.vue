@@ -16,7 +16,12 @@ const props = defineProps({
     class="my-3"
   >
     <v-card-item>
-      <v-card-title>{{ props.recipe?.name }}</v-card-title>
+      <v-card-title>
+        {{
+          // @ts-ignore
+          $t("game."+props.recipe?.name)
+        }}
+      </v-card-title>
     </v-card-item>
 
     <v-card-text>

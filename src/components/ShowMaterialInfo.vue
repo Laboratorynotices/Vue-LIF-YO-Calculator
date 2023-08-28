@@ -15,6 +15,10 @@ const props = defineProps({
     v-for="(value, keyOfMaterial, index) in props.material"
     :key="index"
   >
-    {{ index }}. {{ keyOfMaterial }} = {{ value }}
+    {{ index }}. {{ keyOfMaterial }} =
+    {{
+      // @ts-ignore
+      $t("game."+value)
+    }}
   </p>
 </template>
