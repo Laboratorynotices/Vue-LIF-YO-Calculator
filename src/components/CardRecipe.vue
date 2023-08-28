@@ -33,6 +33,7 @@ const props = defineProps({
       <show-material-info
         v-for="(material, index) in props.recipe?.materials"
         :key="index"
+        :index="index"
         :material="material"
       ></show-material-info>
     </v-card-text>
