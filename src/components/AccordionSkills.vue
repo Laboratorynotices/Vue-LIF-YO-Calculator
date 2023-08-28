@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Skill } from "@/types";
-import CardRecipe from "./CardRecipe.vue";
+import CardsRecipes from "./CardsRecipes.vue";
 import skills from "@/recipes.json";
 </script>
 
@@ -12,11 +12,7 @@ import skills from "@/recipes.json";
       :title="skill.name"
     >
       <v-expansion-panel-text>
-        <card-recipe
-          v-for="(recipe, index) in skill.recipes"
-          :key="index"
-          :recipe="recipe"
-        ></card-recipe>
+        <cards-recipes :recipes="skill.recipes"></cards-recipes>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
