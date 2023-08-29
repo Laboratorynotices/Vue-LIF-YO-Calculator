@@ -95,7 +95,7 @@ const updateQualitySummands = (weight: number, index: number): void => {
   // Возвращаем остаток, но он не должен быть выше уровня навыка
   return Math.min(
     quality,
-    (props.skillLevel as number)
+    Math.floor(props.skillLevel as number)
   );
 });
 </script>
