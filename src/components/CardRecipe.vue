@@ -16,10 +16,23 @@ const props = defineProps({
   clothingLevel: Number
 });
 
+/*****************************/
+/******** Вес навыка  ********/
+/*****************************/
+
 /**
  * Хранилище для весов компонентов
  */
 const weightedSummands: Ref<number[]> = ref([]);
+
+/**
+ * Обновляет один из весов компонентов
+ * @param weight новое значение веса
+ * @param index индекс в списке весов
+ */
+const updateWeight = (weight: number, index: number): void => {
+  weightedSummands.value[index] = weight;
+};
 
 /**
  * Вес самого навыка.
@@ -37,14 +50,54 @@ const skillweight = computed((): number => {
   return skillweight;
 });
 
+/*****************************/
+/***** Качество продукта *****/
+/*****************************/
+
 /**
- * Обновляет один из весов компонентов
+ * В этой переменной будет храниться список взвешенных суммантов.
+ * Качества, полученные от ингредиентов.
+ * Нужно для подсчитывания, поскольку от дочерних компонентов
+ * передаются лишь новые значения, а не старые.
+ */
+const qualitySummands: Ref<number[]> = ref([]);
+
+/**
+ * Обновляет одно из слагаемых для подсчёта суммы качества.
  * @param weight новое значение веса
  * @param index индекс в списке весов
  */
-const updateWeight = (weight: number, index: number): void => {
-  weightedSummands.value[index] = weight;
+const updateQualitySummands = (weight: number, index: number): void => {
+  qualitySummands.value[index] = weight;
 };
+
+/**
+ * Подсчёт качества продукта.
+ * Высчитывается, как сумма качеств, приносимых от ингридиентов,
+ * навыка, инструмента и производственного здания.
+ */
+ const quality = computed((): number => {
+  /* Результат будет сумма отдельных слагаемых
+   * от ингредиентов, навыка, инструмента и
+   * производственного здания.
+   */
+  let quality = Math.floor(
+    skillweight.value * (
+      (props.skillLevel as number) +
+      (props.clothingLevel as number)/5
+    )/100
+  );
+  // Проходимся по каждому элементу в списке весов
+  qualitySummands.value.map((summand) => {
+    // Отнимаем очередной элемент от результата
+    quality += summand;
+  });
+  // Возвращаем остаток, но он не должен быть выше уровня навыка
+  return Math.min(
+    quality,
+    (props.skillLevel as number)
+  );
+});
 </script>
 
 <template>
@@ -56,7 +109,7 @@ const updateWeight = (weight: number, index: number): void => {
         {{
           // @ts-ignore
           $t("game."+props.recipe?.name)
-        }} {{ skillweight }} {{ props.skillLevel }} {{ props.clothingLevel }}
+        }} {{ quality }}
       </v-card-title>
     </v-card-item>
 
@@ -66,6 +119,7 @@ const updateWeight = (weight: number, index: number): void => {
         :key="index"
         :index="index"
         :material="material"
+        @updateSummand="updateQualitySummands"
         @returnWeigt="updateWeight"
       ></show-material-info>
     </v-card-text>
