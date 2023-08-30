@@ -93,6 +93,7 @@ onMounted(() => {
         style="width: 100px"
         density="compact"
         hide-details
+        @update:model-value="emit('updateSummand', weightedSummand, (props.index as number))"
         variant="outlined"
       ></v-text-field>
     </template>
