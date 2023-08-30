@@ -8,5 +8,8 @@ import { navElements } from "@/menu-elements";
     :key="i"
     :to="navElement.path"
     variant="text"
-  >{{ navElement.nameMenu }}</v-btn>
+  >{{
+    // @ts-ignore
+    $t("navigation."+navElement.nameMenu)
+  }}</v-btn>
 </template>

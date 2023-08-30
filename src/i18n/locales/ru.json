@@ -3,12 +3,21 @@
   "Level of clothing": "Уровень одежды",
   "Level of item": "Уровень предмета",
   "Level of skill": "Уровень навыка",
+  "This will not be translated": "Это не будет переведено.",
+  "navigation": {
+    "About": "О приложении",
+    "qualityCalculator": "Калькулятор",
+    "Home": "Главная"
+  },
   "game": {
     "Artisan": "Ремёсла",
     "Branch": "Ветка",
+    "Cheese": "Сыр",
     "Clay": "Глина",
     "Construction": "Строительсво",
+    "Cooking": "Готовка",
     "Furnace": "Плавильная печь",
+    "Milk": "Молоко",
     "Mortar and pestle": "Ступка с пестиком",
     "Plant fiber": "Растительные волокна",
     "Primitive Crucible and Stick": "Примитивный тигель и палка",

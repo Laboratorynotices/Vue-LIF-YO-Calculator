@@ -3,12 +3,21 @@
   "Level of clothing": "Level of clothing",
   "Level of item": "Level of item",
   "Level of skill": "Level of skill",
+  "This will not be translated": "This will not be translated.",
+  "navigation": {
+    "About": "About",
+    "qualityCalculator": "Calculator",
+    "Home": "Home"
+  },
   "game": {
     "Artian": "Artian",
     "Branch": "Branch",
+    "Cheese": "Cheese",
     "Clay": "Clay",
     "Construction": "Construction",
+    "Cooking": "Cooking",
     "Furnace": "Furnace",
+    "Milk": "Milk",
     "Mortar and pestle": "Mortar and pestle",
     "Plant fiber": "Plant fiber",
     "Primitive Crucible and Stick": "Primitive Crucible and Stick",
