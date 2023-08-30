@@ -6,12 +6,40 @@ import { computed, onMounted, ref } from "vue";
 /**
  * Определяем emit для обратной связи с родительским компонентом.
  */
-const emit = defineEmits<{
-  // Регистрируем событие, которое должно возвращать вес ингредиента.
-  (e: "returnWeigt", weight: number, index: number): void,
+const emit = defineEmits({
+  /**
+   * Регистрируем событие, которое должно возвращать вес ингредиента.
+   * Прописываем два параметра у этого события.
+   * А так же логику валидации.
+   * Должно возвращать true, когда всё в порядке.
+   */
+  returnWeigt: (weight: number, index: number): boolean => {
+    return (
+      (
+        // Вес должен быть больше или равен нулю и...
+        0 <= weight &&
+        // Вес должен быть меньше или равень сотни...
+        weight <= 100
+      ) &&
+      // а так же индекс должен быть больше или равен нулю.
+      index >= 0
+    );
+  },
   // Регистрируем событие, которое должно возвращать качество от ингредиента.
-  (e: "updateSummand", weightedSummand: number, index: number): void
-}>();
+  updateSummand: (weight: number, index: number): boolean => {
+    return (
+      (
+        // Качество должно быть больше или равен нулю и...
+        0 <= weight &&
+        weight <= 100
+        // Качество должено быть меньше или равень сотни...
+      ) &&
+      // а так же индекс должен быть больше или равен нулю.
+      index >= 0
+    );
+  }
+});
+
 
 // Данные, теперь получаем от "родительского" элемента
 const props = defineProps({
@@ -94,6 +122,8 @@ onMounted(() => {
         density="compact"
         hide-details
         @update:model-value="emit('updateSummand', weightedSummand, (props.index as number))"
+        max="100"
+        min="0"
         variant="outlined"
       ></v-text-field>
     </template>

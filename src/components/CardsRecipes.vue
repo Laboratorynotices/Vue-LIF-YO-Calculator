@@ -68,6 +68,8 @@ const clothingLevel = ref(0);
         style="width: 100px"
         density="compact"
         hide-details
+        max="100"
+        min="0"
         variant="outlined"
       ></v-text-field>
     </template>
