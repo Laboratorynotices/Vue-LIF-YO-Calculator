@@ -8,12 +8,12 @@
           {
             "name": "Branch",
             "quantity": 1,
-            "weight": 10
+            "weight": 30
           },
           {
             "name": "Rock",
             "quantity": 1,
-            "weight": 10
+            "weight": 30
           }
         ]
       },
@@ -71,6 +71,25 @@
             "weight": 10
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Cooking",
+    "recipes": [
+      {
+        "name": "Cheese",
+        "src": "static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/a5/Cheese.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Milk",
+            "quantity": 1,
+            "weight": 60
+          }
+        ],
+        "toolWeight": 10,
+        "workbenchWeight": 10
       }
     ]
   }
