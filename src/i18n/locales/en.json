@@ -3,6 +3,8 @@
   "Level of clothing": "Level of clothing",
   "Level of item": "Level of item",
   "Level of skill": "Level of skill",
+  "Level of tool": "Level of tool",
+  "Level of workbench": "Level of workbench",
   "This will not be translated": "This will not be translated.",
   "navigation": {
     "About": "About",
@@ -10,7 +12,7 @@
     "Home": "Home"
   },
   "game": {
-    "Artian": "Artian",
+    "Artisan": "Artisan",
     "Branch": "Branch",
     "Cheese": "Cheese",
     "Clay": "Clay",

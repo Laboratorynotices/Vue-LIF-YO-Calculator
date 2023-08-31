@@ -42,7 +42,11 @@ export interface Recipe {
   // Название продукции
   "name": string,
   // Список материалов
-  "materials": Material[]
+  "materials": Material[],
+  // Вес влияния инструмента
+  "toolWeight"?: number,
+  // Вес влияния верстака
+  "workbenchWeight"?: number
 }
 
 /**

@@ -13,7 +13,11 @@ const props = defineProps({
   // Уровень навыка
   skillLevel: Number,
   // Уровень профессиональной одежды
-  clothingLevel: Number
+  clothingLevel: Number,
+  // Уровень инструмента
+  toolLevel: Number,
+  // Уровень верстака
+  workbenchLevel: Number
 });
 
 /*****************************/
@@ -35,17 +39,53 @@ const updateWeight = (weight: number, index: number): void => {
 };
 
 /**
+ * Вес влияния инструмента на качество продукта.
+ * Вначале проверяем передаётся ли это значение от
+ * родительского компанента.
+ */
+const toolWeight: number =
+  (
+    props.recipe?.toolWeight !== undefined &&
+    props.recipe?.toolWeight !== null
+  ) ?
+  props.recipe?.toolWeight :
+  0;
+
+/**
+ * Вес влияния верстака на качество продукта.
+ * Вначале проверяем передаётся ли это значение от
+ * родительского компанента.
+ */
+const workbenchWeight: number =
+  (
+    props.recipe?.workbenchWeight !== undefined &&
+    props.recipe?.workbenchWeight !== null
+  ) ?
+  props.recipe?.workbenchWeight :
+  0;
+
+/**
  * Вес самого навыка.
  * Высчитывается, как остаток после остальных весов.
+ * Если вес инструмента и верстака заданы, то они тоже отнимаются.
  */
 const skillweight = computed((): number => {
-  // Результат будет остаток от 100 после вычитания остальных весов
-  let skillweight = 100;
+  /* Результат будет остаток от 100 после вычитания
+   * веса инструмента,
+   * веса верстака
+   * и весов ингредиентов
+   */
+  let skillweight =
+    100
+    - toolWeight
+    - workbenchWeight;
+
   // Проходимся по каждому элементу в списке весов
   weightedSummands.value.map((summand) => {
     // Отнимаем очередной элемент от результата
     skillweight -= summand;
   });
+
   // Возвращаем остаток
   return skillweight;
 });
@@ -76,8 +116,8 @@ const updateQualitySummands = (weight: number, index: number): void => {
  * Высчитывается, как сумма качеств, приносимых от ингридиентов,
  * навыка, инструмента и производственного здания.
  */
- const quality = computed((): number => {
-  /* Результат будет сумма отдельных слагаемых
+const quality = computed((): number => {
+  /* Результат будет - сумма отдельных слагаемых
    * от ингредиентов, навыка, инструмента и
    * производственного здания.
    */
@@ -87,12 +127,30 @@ const updateQualitySummands = (weight: number, index: number): void => {
       (props.clothingLevel as number)/5
     )/100
   );
+
+  // Добавляем качество от инструмента
+  quality += Math.floor(
+    toolWeight * (props.toolLevel as number)/100
+  );
+
+  // Добавляем качество от верстака
+  quality += Math.floor(
+    workbenchWeight * (props.workbenchLevel as number)/100
+  );
+
   // Проходимся по каждому элементу в списке весов
   qualitySummands.value.map((summand) => {
-    // Отнимаем очередной элемент от результата
+    // Добавляем качество от очередного элемента
     quality += summand;
   });
-  // Возвращаем остаток, но он не должен быть выше уровня навыка
+
+  /* TODO бонус import.meta.env.VITE_PRODUCTION_BUILDING_BONUS
+   * на производство при помощи спецпроизводства.
+   */
+
+  // TODO штраф при использовании примитивного инструмента.
+
+  // Возвращаем сумму, но он не должен быть выше уровня навыка
   return Math.min(
     quality,
     Math.floor(props.skillLevel as number)
