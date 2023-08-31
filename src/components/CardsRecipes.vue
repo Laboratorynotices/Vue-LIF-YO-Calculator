@@ -55,6 +55,19 @@ const showToolInputField: Ref<boolean> = ref(false);
 const setShowToolInputFieldTrue = (): void => {
   showToolInputField.value = true;
 }
+
+/**
+ * Надо ли показывать поле ввода уровня инструментов
+ */
+const showWorkbenchInputField: Ref<boolean> = ref(false);
+
+/**
+ * Изменяет переменную setShowToolInputFieldTrue,
+ * чтобы поля ввода информации об инструменте отображались.
+ */
+const setShowWorkbenchInputFieldTrue = (): void => {
+  showWorkbenchInputField.value = true;
+}
 </script>
 
 <template>
@@ -158,45 +171,48 @@ const setShowToolInputFieldTrue = (): void => {
     </v-switch>
   </div>
 
-  <!-- workbenchLevel slider -->
-  <v-slider
-    v-model="workbenchLevel"
-    max="100"
-    step="1"
-    hide-details
-    class="ma-4"
-  >
-    <template v-slot:prepend>
-      {{
-        // @ts-ignore
-        $t("Level of workbench")
-      }}
-    </template>
-    <template v-slot:append>
-      <v-text-field
-        v-model="workbenchLevel"
-        type="number"
-        style="width: 100px"
-        density="compact"
-        hide-details
-        max="100"
-        min="0"
-        variant="outlined"
-      ></v-text-field>
-    </template>
-  </v-slider>
+  <!-- Блок отображающий поле ввода уровня верстака -->
+  <div v-if="showWorkbenchInputField">
+    <!-- workbenchLevel slider -->
+    <v-slider
+      v-model="workbenchLevel"
+      max="100"
+      step="1"
+      hide-details
+      class="ma-4"
+    >
+      <template v-slot:prepend>
+        {{
+          // @ts-ignore
+          $t("Level of workbench")
+        }}
+      </template>
+      <template v-slot:append>
+        <v-text-field
+          v-model="workbenchLevel"
+          type="number"
+          style="width: 100px"
+          density="compact"
+          hide-details
+          max="100"
+          min="0"
+          variant="outlined"
+        ></v-text-field>
+      </template>
+    </v-slider>
 
-  <!-- workbenchBonus switch -->
-  <v-switch
-    v-model="workbenchBonus"
-    hide-details
-    color="blue"
-  >
-    <template v-slot:label>{{
-      // @ts-ignore
-      $t("Has workbench bonus?")
-    }}</template>
-  </v-switch>
+    <!-- workbenchBonus switch -->
+    <v-switch
+      v-model="workbenchBonus"
+      hide-details
+      color="blue"
+    >
+      <template v-slot:label>{{
+        // @ts-ignore
+        $t("Has workbench bonus?")
+      }}</template>
+    </v-switch>
+  </div>
 
   <card-recipe
     v-for="(recipe, index) in props.recipes"
@@ -209,5 +225,6 @@ const setShowToolInputFieldTrue = (): void => {
     :workbenchBonus="workbenchBonus"
     :workbenchLevel="workbenchLevel"
     @toolNeeded.once="setShowToolInputFieldTrue"
+    @workbenchNeeded.once="setShowWorkbenchInputFieldTrue"
   ></card-recipe>
 </template>

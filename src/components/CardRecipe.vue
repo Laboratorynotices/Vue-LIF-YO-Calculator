@@ -32,7 +32,12 @@ const emit = defineEmits({
    * Регистрируем событие, которое должно вызываться,
    * если для рецепта нужен инструмент.
    */
-   toolNeeded: Boolean
+  toolNeeded: Boolean,
+  /**
+   * Регистрируем событие, которое должно вызываться,
+   * если для рецепта нужен инструмент.
+   */
+  workbenchNeeded: Boolean
 });
 
 /******************************/
@@ -197,7 +202,17 @@ onMounted(() => {
        * чтобы отобразить поле ввода уровня инструмента
        */
       emit("toolNeeded");
-    }
+    };
+  // Если в рецепте указан вес инструмента...
+  if (
+    props.recipe?.workbenchWeight !== undefined &&
+    props.recipe?.workbenchWeight !== null)
+    {
+      /* ...вызываем событие toolNeeded,
+       * чтобы отобразить поле ввода уровня инструмента
+       */
+      emit("workbenchNeeded");
+    };
 });
 </script>
 
