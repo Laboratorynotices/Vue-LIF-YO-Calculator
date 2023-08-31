@@ -17,7 +17,11 @@ const props = defineProps({
   // Уровень инструмента
   toolLevel: Number,
   // Уровень верстака
-  workbenchLevel: Number
+  workbenchLevel: Number,
+  // Используется примитивный инструмент
+  primitiveTool: Boolean,
+  // Есть ли бонус у верстака
+  workbenchBonus: Boolean
 });
 
 /*****************************/
@@ -144,11 +148,23 @@ const quality = computed((): number => {
     quality += summand;
   });
 
-  /* TODO бонус import.meta.env.VITE_PRODUCTION_BUILDING_BONUS
+  /* бонус import.meta.env.VITE_PRODUCTION_BUILDING_BONUS
    * на производство при помощи спецпроизводства.
    */
+  if (props.workbenchBonus) {
+    quality = Math.floor(
+      quality *
+      (1 + import.meta.env.VITE_PRODUCTION_BUILDING_BONUS/100)
+    );
+  }
 
-  // TODO штраф при использовании примитивного инструмента.
+  // штраф при использовании примитивного инструмента.
+  if (props.primitiveTool) {
+    /* При использовании примитивного инструмента
+     * половина качества теряется.
+     */
+    quality = Math.floor(quality/2);
+  }
 
   // Возвращаем сумму, но он не должен быть выше уровня навыка
   return Math.min(

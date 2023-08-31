@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Recipe } from "@/types";
 import CardRecipe from "./CardRecipe.vue";
-import { ref } from "vue";
+import { ref, type Ref } from "vue";
 
 // Данные, теперь получаем от "родительского" элемента
 const props = defineProps({
@@ -14,17 +14,27 @@ const props = defineProps({
 /**
  * Уровень навыка
  */
-const skillLevel = ref(100);
+const skillLevel: Ref<number> = ref(100);
 
 /**
  * Уровень профессиональной одежды
  */
-const clothingLevel = ref(0);
+const clothingLevel: Ref<number> = ref(0);
 
 /**
  * Уровень инструмента
  */
-const toolLevel = ref(100);
+const toolLevel: Ref<number> = ref(100);
+
+/**
+ * Используется ли примитивный инструмент
+ */
+const primitiveTool: Ref<boolean> = ref(false);
+
+/**
+ * Есть ли бонус у верстака?
+ */
+const workbenchBonus: Ref<boolean> = ref(false);
 
 /**
  * Уровень верстака
@@ -117,6 +127,18 @@ const workbenchLevel = ref(100);
     </template>
   </v-slider>
 
+  <!-- primitiveTool switch -->
+  <v-switch
+    v-model="primitiveTool"
+    hide-details
+    color="red"
+  >
+    <template v-slot:label>{{
+      // @ts-ignore
+      $t("Is primitive tool?")
+    }}</template>
+  </v-switch>
+
   <!-- workbenchLevel slider -->
   <v-slider
     v-model="workbenchLevel"
@@ -145,6 +167,18 @@ const workbenchLevel = ref(100);
     </template>
   </v-slider>
 
+  <!-- workbenchBonus switch -->
+  <v-switch
+    v-model="workbenchBonus"
+    hide-details
+    color="blue"
+  >
+    <template v-slot:label>{{
+      // @ts-ignore
+      $t("Has workbench bonus?")
+    }}</template>
+  </v-switch>
+
   <card-recipe
     v-for="(recipe, index) in props.recipes"
     :key="index"
@@ -152,6 +186,8 @@ const workbenchLevel = ref(100);
     :skillLevel="skillLevel"
     :clothingLevel="clothingLevel"
     :toolLevel="toolLevel"
+    :primitiveTool="primitiveTool"
+    :workbenchBonus="workbenchBonus"
     :workbenchLevel="workbenchLevel"
   ></card-recipe>
 </template>
