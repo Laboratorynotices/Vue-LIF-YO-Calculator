@@ -17,7 +17,10 @@ import skills from "@/recipes.json";
         }}
       </v-expansion-panel-title>
       <v-expansion-panel-text>
-        <cards-recipes :recipes="skill.recipes"></cards-recipes>
+        <cards-recipes
+          :professionalClothing="skill.professionalClothing"
+          :recipes="skill.recipes"
+        ></cards-recipes>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>

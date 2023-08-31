@@ -55,6 +55,8 @@ export interface Recipe {
 export interface Skill {
   // Название навыка
   "name": string,
+  // Действует ли на этот навык бонус от профессиональной одежды
+  "professionalClothing": boolean,
   // Список рецептов
   "recipes": Recipe[]
 }

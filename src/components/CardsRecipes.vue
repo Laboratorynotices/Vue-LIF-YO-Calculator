@@ -8,7 +8,9 @@ const props = defineProps({
   recipes: {
     // Хитрый приём, чтобы определить тип (а не интерфейс) переменной
     type: Object as () => Recipe[]
-  }
+  },
+  // Надо ли отображать поле ввода уровня одежды
+  professionalClothing: Boolean
 });
 
 /**
@@ -73,6 +75,7 @@ const workbenchLevel = ref(100);
 
   <!-- clothingLevel slider -->
   <v-slider
+    v-if="props.professionalClothing"
     v-model="clothingLevel"
     max="100"
     step="1"

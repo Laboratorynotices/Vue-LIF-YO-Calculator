@@ -1,6 +1,7 @@
 [
   {
     "name": "Artisan",
+    "professionalClothing": false,
     "recipes": [
       {
         "name": "Mortar and pestle",
@@ -51,6 +52,7 @@
   },
   {
     "name": "Construction",
+    "professionalClothing": false,
     "recipes": [
       {
         "name": "Furnace",
@@ -76,6 +78,7 @@
   },
   {
     "name": "Cooking",
+    "professionalClothing": true,
     "recipes": [
       {
         "name": "Cheese",
