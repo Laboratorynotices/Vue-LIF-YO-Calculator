@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Recipe } from "@/types";
 import ShowMaterialInfo from "./ShowMaterialInfo.vue"
-import { computed, ref, type Ref } from "vue";
+import { computed, onMounted, ref, type Ref } from "vue";
 
 // Данные, теперь получаем от "родительского" элемента
 const props = defineProps({
@@ -24,9 +24,20 @@ const props = defineProps({
   workbenchBonus: Boolean
 });
 
-/*****************************/
-/******** Вес навыка  ********/
-/*****************************/
+/**
+ * Определяем emit для обратной связи с родительским компонентом.
+ */
+const emit = defineEmits({
+  /**
+   * Регистрируем событие, которое должно вызываться,
+   * если для рецепта нужен инструмент.
+   */
+   toolNeeded: Boolean
+});
+
+/******************************/
+/********* Вес навыка *********/
+/******************************/
 
 /**
  * Хранилище для весов компонентов
@@ -94,9 +105,9 @@ const skillweight = computed((): number => {
   return skillweight;
 });
 
-/*****************************/
-/***** Качество продукта *****/
-/*****************************/
+/******************************/
+/***** Качество продукта ******/
+/******************************/
 
 /**
  * В этой переменной будет храниться список взвешенных суммантов.
@@ -171,6 +182,22 @@ const quality = computed((): number => {
     quality,
     Math.floor(props.skillLevel as number)
   );
+});
+
+/*
+ * Когда компонент соберёмся выполнем несколько функций.
+ */
+onMounted(() => {
+  // Если в рецепте указан вес инструмента...
+  if (
+    props.recipe?.toolWeight !== undefined &&
+    props.recipe?.toolWeight !== null)
+    {
+      /* ...вызываем событие toolNeeded,
+       * чтобы отобразить поле ввода уровня инструмента
+       */
+      emit("toolNeeded");
+    }
 });
 </script>
 

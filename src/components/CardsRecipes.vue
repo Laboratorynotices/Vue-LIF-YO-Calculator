@@ -42,6 +42,19 @@ const workbenchBonus: Ref<boolean> = ref(false);
  * Уровень верстака
  */
 const workbenchLevel = ref(100);
+
+/**
+ * Надо ли показывать поле ввода уровня инструментов
+ */
+const showToolInputField: Ref<boolean> = ref(false);
+
+/**
+ * Изменяет переменную setShowToolInputFieldTrue,
+ * чтобы поля ввода информации об инструменте отображались.
+ */
+const setShowToolInputFieldTrue = (): void => {
+  showToolInputField.value = true;
+}
 </script>
 
 <template>
@@ -102,45 +115,48 @@ const workbenchLevel = ref(100);
     </template>
   </v-slider>
 
-  <!-- toolLevel slider -->
-  <v-slider
-    v-model="toolLevel"
-    max="100"
-    step="1"
-    hide-details
-    class="ma-4"
-  >
-    <template v-slot:prepend>
-      {{
-        // @ts-ignore
-        $t("Level of tool")
-      }}
-    </template>
-    <template v-slot:append>
-      <v-text-field
-        v-model="toolLevel"
-        type="number"
-        style="width: 100px"
-        density="compact"
-        hide-details
-        max="100"
-        min="0"
-        variant="outlined"
-      ></v-text-field>
-    </template>
-  </v-slider>
+  <!-- Блок отображающий поле ввода уровня инструмента -->
+  <div v-if="showToolInputField">
+    <!-- toolLevel slider -->
+    <v-slider
+      v-model="toolLevel"
+      max="100"
+      step="1"
+      hide-details
+      class="ma-4"
+    >
+      <template v-slot:prepend>
+        {{
+          // @ts-ignore
+          $t("Level of tool")
+        }}
+      </template>
+      <template v-slot:append>
+        <v-text-field
+          v-model="toolLevel"
+          type="number"
+          style="width: 100px"
+          density="compact"
+          hide-details
+          max="100"
+          min="0"
+          variant="outlined"
+        ></v-text-field>
+      </template>
+    </v-slider>
 
-  <!-- primitiveTool switch -->
-  <v-switch
-    v-model="primitiveTool"
-    hide-details
-    color="red"
-  >
-    <template v-slot:label>{{
-      // @ts-ignore
-      $t("Is primitive tool?")
-    }}</template>
-  </v-switch>
+    <!-- primitiveTool switch -->
+    <v-switch
+      v-model="primitiveTool"
+      hide-details
+      color="red"
+    >
+      <template v-slot:label>{{
+        // @ts-ignore
+        $t("Is primitive tool?")
+      }}</template>
+    </v-switch>
+  </div>
 
   <!-- workbenchLevel slider -->
   <v-slider
@@ -192,5 +208,6 @@ const workbenchLevel = ref(100);
     :primitiveTool="primitiveTool"
     :workbenchBonus="workbenchBonus"
     :workbenchLevel="workbenchLevel"
+    @toolNeeded.once="setShowToolInputFieldTrue"
   ></card-recipe>
 </template>
