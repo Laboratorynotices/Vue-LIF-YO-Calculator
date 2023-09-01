@@ -222,6 +222,11 @@ onMounted(() => {
   >
     <v-card-item>
       <v-card-title>
+        <img
+          :src="props.recipe?.src"
+          :alt="props.recipe?.name"
+          :title="props.recipe?.name"
+        />
         {{
           // @ts-ignore
           $t("game."+props.recipe?.name)
@@ -241,3 +246,9 @@ onMounted(() => {
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+img {
+  height: 1em;
+}
+</style>

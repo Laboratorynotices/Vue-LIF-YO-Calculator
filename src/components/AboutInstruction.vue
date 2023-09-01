@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, type Ref } from "vue";
 import CodeBlock from "./CodeBlock.vue";
+import AboutImages from "./AboutImages.vue";
 
 /**
  * В этой переменной будут храниться какие панели открыты.
@@ -206,6 +207,7 @@ const panel: Ref<string[]> = ref(["last"]);
         </code-block>
       </v-expansion-panel-text>
     </v-expansion-panel>
+    <about-images></about-images>
   </v-expansion-panels>
 </template>
 

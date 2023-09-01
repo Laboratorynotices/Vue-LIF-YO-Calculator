@@ -11,6 +11,7 @@ import skills from "@/recipes.json";
       :key="index"
     >
       <v-expansion-panel-title>
+        <img :src="skill.src" class="mr-2" :alt="skill.name" :title="skill.name" />
         {{
           // @ts-ignore
           $t("game."+skill.name)
@@ -25,3 +26,15 @@ import skills from "@/recipes.json";
     </v-expansion-panel>
   </v-expansion-panels>
 </template>
+
+<style scoped>
+/* Заголовок панели навыка */
+.v-expansion-panel-title {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.v-expansion-panel-title img {
+  height: 2.5em;
+}
+</style>

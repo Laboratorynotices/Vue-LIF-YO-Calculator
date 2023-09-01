@@ -41,6 +41,8 @@ export interface Material {
 export interface Recipe {
   // Название продукции
   "name": string,
+  // Ссылка на картинку предмета к этому рецепту 
+  "src": string,
   // Список материалов
   "materials": Material[],
   // Вес влияния инструмента
@@ -57,6 +59,8 @@ export interface Skill {
   "name": string,
   // Действует ли на этот навык бонус от профессиональной одежды
   "professionalClothing": boolean,
+  // Ссылка на картинку к этому навыку
+  "src": string,
   // Список рецептов
   "recipes": Recipe[]
 }
