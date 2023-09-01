@@ -1,10 +1,146 @@
 [
   {
     "name": "Artisan",
+    "nameRu": "Ремёсла",
+    "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/4/46/Artisan.png",
     "professionalClothing": false,
     "recipes": [
       {
+        "name": "Primitive sickle",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/0a/Primitive_sickle.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 1,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "name": "Primitive shovel",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/a6/Primitive_shovel.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 30
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 1,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "name": "Primitive hammer",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/c/c0/Primitive_hammer.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 25
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 3,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "name": "Primitive axe",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ec/Primitive_axe.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 25
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 2,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "name": "Primitive pickaxe",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/00/Primitive_pickaxe.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 45
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 3,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "name": "Primitive saw",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/c/c6/Primitive_saw.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 3,
+            "weight": 20
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 7,
+            "weight": 40
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 3,
+            "weight": 20
+          }
+        ]
+      },
+      {
         "name": "Mortar and pestle",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Mortar_and_pestle.png",
+        "minLevel": 0,
         "materials": [
           {
             "name": "Branch",
@@ -20,6 +156,8 @@
       },
       {
         "name": "Primitive Crucible and Stick",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9a/Primitive_crucible_and_stick.png",
+        "minLevel": 0,
         "materials": [
           {
             "name": "Rock",
@@ -35,6 +173,8 @@
       },
       {
         "name": "Primitive Fishing Pole",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/72/Primitive_fishing_pole.png",
+        "minLevel": 0,
         "materials": [
           {
             "name": "Branch",
@@ -52,10 +192,13 @@
   },
   {
     "name": "Construction",
+    "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/37/Construction.png",
     "professionalClothing": false,
     "recipes": [
       {
         "name": "Furnace",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/0f/Furnace.png",
+        "minLevel": 0,        
         "materials": [
           {
             "name": "Plant fiber",
@@ -78,11 +221,12 @@
   },
   {
     "name": "Cooking",
+    "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/f/f4/Cooking.png",
     "professionalClothing": true,
     "recipes": [
       {
         "name": "Cheese",
-        "src": "static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/a5/Cheese.png",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/a5/Cheese.png",
         "minLevel": 0,
         "materials": [
           {
