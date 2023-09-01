@@ -19,7 +19,7 @@ const menuElements: Array<MenuAndRouteElement> = [
     component: () => import("@/views/HomeView.vue"),
     meta: { title: "Home" },
     nameMenu: "Home",
-    showInMenu: true,
+    showInMenu: false,
   },
   {
     path: "/about",
