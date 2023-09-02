@@ -50,7 +50,7 @@
         ]
       },
       {
-        "name": "Primitive hammer",
+        "name": "Primitive Hammer",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/c/c0/Primitive_hammer.png",
         "minLevel": 0,
         "materials": [
@@ -72,7 +72,7 @@
         ]
       },
       {
-        "name": "Primitive axe",
+        "name": "Primitive Axe",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ec/Primitive_axe.png",
         "minLevel": 0,
         "materials": [
@@ -94,7 +94,7 @@
         ]
       },
       {
-        "name": "Primitive pickaxe",
+        "name": "Primitive Pickaxe",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/00/Primitive_pickaxe.png",
         "minLevel": 0,
         "materials": [
@@ -138,6 +138,92 @@
         ]
       },
       {
+        "name": "Torch",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/b/b2/Torch.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 3,
+            "weight": 30
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "name": "Primitive Knife",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/78/Primitive_knife.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Flint stone",
+            "quantity": 1,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "name": "Primitive Crucible and Stick",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9a/Primitive_crucible_and_stick.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Rock",
+            "quantity": 2,
+            "weight": 30
+          },
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "name": "Primitive Fishing Pole",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/72/Primitive_fishing_pole.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 40
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 2,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "name": "Campfire",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/01/Campfire.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 5,
+            "weight": 40
+          }
+        ]
+      },
+
+      {
         "name": "Mortar and pestle",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Mortar_and_pestle.png",
         "minLevel": 0,
@@ -151,40 +237,6 @@
             "name": "Rock",
             "quantity": 1,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "name": "Primitive Crucible and Stick",
-        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9a/Primitive_crucible_and_stick.png",
-        "minLevel": 0,
-        "materials": [
-          {
-            "name": "Rock",
-            "quantity": 2,
-            "weight": 10
-          },
-          {
-            "name": "Branch",
-            "quantity": 1,
-            "weight": 10
-          }
-        ]
-      },
-      {
-        "name": "Primitive Fishing Pole",
-        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/72/Primitive_fishing_pole.png",
-        "minLevel": 0,
-        "materials": [
-          {
-            "name": "Branch",
-            "quantity": 1,
-            "weight": 10
-          },
-          {
-            "name": "Plant fiber",
-            "quantity": 2,
-            "weight": 10
           }
         ]
       }

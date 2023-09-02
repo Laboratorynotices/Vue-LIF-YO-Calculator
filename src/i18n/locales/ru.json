@@ -16,6 +16,7 @@
   "game": {
     "Artisan": "Ремёсла",
     "Branch": "Ветка",
+    "Campfire": "Костёр",
     "Cheese": "Сыр",
     "Clay": "Глина",
     "Construction": "Строительство",
@@ -25,15 +26,17 @@
     "Milk": "Молоко",
     "Mortar and pestle": "Ступка с пестиком",
     "Plant fiber": "Растительные волокна",
-    "Primitive axe": "Примитивный топор",
+    "Primitive Axe": "Примитивный топор",
     "Primitive Crucible and Stick": "Примитивный тигель и палка",
     "Primitive Fishing Pole": "Примитивная удочка",
-    "Primitive hammer": "Примитивный молот",
-    "Primitive pickaxe": "Примитивная кирка",
+    "Primitive Hammer": "Примитивный молот",
+    "Primitive Knife": "Примитивный нож",
+    "Primitive Pickaxe": "Примитивная кирка",
     "Primitive saw": "Примитивная пила",
     "Primitive shovel": "Примитивная лопата",
     "Primitive sickle": "Примитивный серп",
     "Rock": "Камень",
+    "Torch": "Факел",
     "Water": "Вода"
   }
 }
