@@ -1,5 +1,8 @@
 {
-  "hello": "hello world",
+  "locales": {
+    "en": "English",
+    "ru": "Russian"
+  },
   "Level of clothing": "Level of clothing",
   "Level of item": "Level of item",
   "Level of skill": "Level of skill",

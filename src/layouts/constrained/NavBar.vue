@@ -2,6 +2,7 @@
 import MainNav from "./MainNav.vue";
 import NavBarAvatar from "./NavBarAvatar.vue";
 import NavBarSearch from "./NavBarSearch.vue";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 </script>
 
 <template>
@@ -14,6 +15,8 @@ import NavBarSearch from "./NavBarSearch.vue";
       <v-spacer></v-spacer>
 
       <nav-bar-search></nav-bar-search>
+
+      <language-switcher></language-switcher>
     </v-container>
   </v-app-bar>
 </template>
