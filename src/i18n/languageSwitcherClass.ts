@@ -14,6 +14,25 @@ export class languageSwitcher {
   }
 
   /**
+   * Задаёт актуальное значение языка
+   */
+  public static set actualLocale(newLocale:string) {
+    // Переключаем язык на сайте
+    i18n.global.locale.value = newLocale;
+    // Меняем языковое обозначение в коде сайта
+    document.querySelector("html")?.setAttribute("lang", newLocale);
+  }
+
+  /**
+   * Вызывается при изменении значения переключателя языка.
+   * @param newLocale строчка с кодом языка
+   */
+  public static switchLocale(newLocale: string):void {
+    // Задаёт новое значение для актуального языка
+    this.actualLocale = newLocale;
+  }
+
+  /**
    * Возвращает массив с поддерживаемыми языками.
    * Список языков берётся из .env-файла.
    */

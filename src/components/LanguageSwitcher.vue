@@ -16,6 +16,7 @@ const selectedLanguage: Ref<string> = ref(languageSwitcher.actualLocale);
       :items="languageSwitcher.availableLocalesForSelect"
       item-title="itemTitle"
       item-value="itemValue"
+      @update:model-value="languageSwitcher.switchLocale(selectedLanguage)"
     ></v-select>
   </div>
 </template>
