@@ -105,6 +105,31 @@ export class languageSwitcher {
   }
 
   /**
+   * Пытается узнать предпочитаемый язык пользователя
+   * от его браузера.
+   * @returns строчка с обозначением языка ("en", "ru"),
+   *          или null, если не было считано.
+   */
+  private static getUserLocale(): string | null {
+    // Считываем данные из браузера
+    let locale = window.navigator.language ||
+      // @ts-ignore
+      window.navigator.userLanguage;
+
+    /* Данные могут прийти в виде "en" или "en-US",
+     * но нам интересна лишь первая часть.
+     */
+    locale = locale.split("-")[0];
+
+    // Поддерживается ли прочитанный язык
+    if (this.isLocaleAvailable(locale))
+      return locale;
+
+    // Прочитанное значение не прошло проверку или было пустым
+    return null;
+  }
+
+  /**
    * Проверяет входит ли передоваемое обозначение языка
    * в список, которые доступны в приложении.
    * @param locale string обозначение языка ("en", "ru")
@@ -125,6 +150,13 @@ export class languageSwitcher {
     if (storagedLocale) {
       // Если в данных что-то было, то мы закончили
       return storagedLocale;
+    }
+
+    // Попробуем считать данные из браузера пользователя
+    const userLocale = this.getUserLocale();
+    if (userLocale) {
+      // Если в данных что-то было, то мы закончили
+      return userLocale;
     }
 
     // На самый крайний случай остаётся вернуть значение из настроек.
