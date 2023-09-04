@@ -5,12 +5,16 @@ import { i18n } from ".";
  */
 export class languageSwitcher {
   /**
+   * Название STORAGE LOCAL, где хранится обозначение
+   * выбранного языка 
+   */
+  private static LOCAL_STORAGE_USER_LOCALE = "user-locale";
+
+  /**
    * Возвращает какой язык сейчас актуален.
-   * Позже добавим загрузку переменных из кеша
-   * и настроек браузера.
    */
   public static get actualLocale(): string {
-    return this.defaultLocales;
+    return i18n.global.locale.value;
   }
 
   /**
@@ -19,8 +23,12 @@ export class languageSwitcher {
   public static set actualLocale(newLocale:string) {
     // Переключаем язык на сайте
     i18n.global.locale.value = newLocale;
+
     // Меняем языковое обозначение в коде сайта
     document.querySelector("html")?.setAttribute("lang", newLocale);
+
+    // Сохраняем обозначение выбранного языка в памяти браузера
+    localStorage.setItem(this.LOCAL_STORAGE_USER_LOCALE, newLocale);
   }
 
   /**
@@ -75,5 +83,59 @@ export class languageSwitcher {
    */
   public static get defaultLocales(): string {
     return import.meta.env.VITE_I18N_DEFAULT_LOCALE
+  }
+
+  /**
+   * Считывает обозначение выбранного языка из памяти браузера.
+   * @returns Возвращает строчку с прочитанным обозначением языка,
+   * если такой язык поддерживается.
+   * Если проверка провалилась или данных не было сохранено,
+   * возвращается null
+   */
+  private static getStoragedLocale(): string | null {
+    // Считываем значение
+    const storagedLocale: string | null = localStorage.getItem(this.LOCAL_STORAGE_USER_LOCALE);
+
+    // Поддерживается ли прочитанный язык
+    if (this.isLocaleAvailable(storagedLocale as string))
+      return storagedLocale;
+
+    // Прочитанное значение не прошло проверку или было пустым
+    return null;
+  }
+
+  /**
+   * Проверяет входит ли передоваемое обозначение языка
+   * в список, которые доступны в приложении.
+   * @param locale string обозначение языка ("en", "ru")
+   * @returns true, если язык поддерживается,
+   * false в противном случае.
+   */
+  private static isLocaleAvailable(locale: string): boolean {
+    return this.availableLocales.includes(locale);
+  }
+
+  /**
+   * Предлагает какой из языков сделать "по умолчанию".
+   * @returns строчка с обозначением языка ("en", "ru")
+   */
+  private static suggestDefaultLanguage(): string {
+    // Вначале считываем данные из "хранилища"
+    const storagedLocale = this.getStoragedLocale();
+    if (storagedLocale) {
+      // Если в данных что-то было, то мы закончили
+      return storagedLocale;
+    }
+
+    // На самый крайний случай остаётся вернуть значение из настроек.
+    return this.defaultLocales;
+  }
+
+  /**
+   * Инициализирует значение для языка по умолчанию
+   */
+  public static initDefaultLocale(): void {
+    // Задаёт значение для языка по умолчанию
+    this.actualLocale = this.suggestDefaultLanguage();
   }
 }
