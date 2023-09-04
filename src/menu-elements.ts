@@ -79,7 +79,7 @@ const makeArrayOfRouterLinkFromMenuElements = (
         // возвращаем лишь нужные данные
         return {
           nameMenu: element.nameMenu,
-          path: element.path,
+          name: element.name,
           showInMenu: element.showInMenu,
         } as RouterLink;
       })

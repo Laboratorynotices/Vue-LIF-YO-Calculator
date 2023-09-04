@@ -6,7 +6,7 @@ import { navElements } from "@/menu-elements";
   <v-btn
     v-for="(navElement, i) in navElements"
     :key="i"
-    :to="navElement.path"
+    :to="{ name: navElement.name }"
     variant="text"
   >{{
     // @ts-ignore

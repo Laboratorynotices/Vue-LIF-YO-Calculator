@@ -7,8 +7,8 @@ import type { RouteRecordRaw } from "vue-router";
 export interface RouterLink {
   // Отображаемое название в навигации
   nameMenu: string;
-  // Относительный путь
-  path: string;
+  // Имя маршрута
+  name: string;
   // Отображать ли пункт в навигации
   showInMenu: boolean;
 }
