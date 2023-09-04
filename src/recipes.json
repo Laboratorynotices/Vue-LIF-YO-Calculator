@@ -222,7 +222,6 @@
           }
         ]
       },
-
       {
         "name": "Mortar and pestle",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Mortar_and_pestle.png",
@@ -239,11 +238,75 @@
             "weight": 30
           }
         ]
+      },
+      {
+        "name": "Sleeping Bag",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/04/Sleeping_bag.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 4,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "name": "Primitive Cooking Pot",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/f/fa/Primitive_cooking_pot.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Rock",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Branch",
+            "quantity": 2,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "name": "Sling",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/93/Sling.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "name": "Bark Box",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/5/5e/Bark_Box.png",
+        "minLevel": 0,
+        "materials": [
+          {
+            "name": "Bark",
+            "quantity": 20,
+            "weight": 50
+          }
+        ]
       }
     ]
   },
   {
     "name": "Construction",
+    "nameRu": "Строительство",
     "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/37/Construction.png",
     "professionalClothing": false,
     "recipes": [
@@ -267,7 +330,26 @@
             "quantity": 25,
             "weight": 10
           }
-        ]
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden Fence",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/3a/Wooden_fence.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 55
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 10,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
       }
     ]
   },

@@ -18,6 +18,9 @@
   },
   "game": {
     "Artisan": "Artisan",
+    "Bark": "Bark",
+    "Bark Box": "Bark Box",
+    "Boards": "Boards",
     "Branch": "Branch",
     "Campfire": "Campfire",
     "Cheese": "Cheese",
@@ -30,6 +33,7 @@
     "Mortar and pestle": "Mortar and pestle",
     "Plant fiber": "Plant fiber",
     "Primitive Axe": "Primitive axe",
+    "Primitive Cooking Pot": "Primitive Cooking Pot",
     "Primitive Crucible and Stick": "Primitive Crucible and Stick",
     "Primitive Fishing Pole": "Primitive Fishing Pole",
     "Primitive Hammer": "Primitive hammer",
@@ -39,7 +43,11 @@
     "Primitive shovel": "Primitive shovel",
     "Primitive sickle": "Primitive sickle",
     "Rock": "Rock",
+    "Simple rope": "Simple rope",
+    "Sleeping Bag": "Sleeping Bag",
+    "Sling": "Sling",
     "Torch": "Torch",
-    "Water": "Water"
+    "Water": "Water",
+    "Wooden Fence": "Wooden Fence"
   }
 }

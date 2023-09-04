@@ -18,6 +18,9 @@
   },
   "game": {
     "Artisan": "Ремёсла",
+    "Bark": "Кора",
+    "Bark Box": "Туесок",
+    "Boards": "Доски",
     "Branch": "Ветка",
     "Campfire": "Костёр",
     "Cheese": "Сыр",
@@ -30,6 +33,7 @@
     "Mortar and pestle": "Ступка с пестиком",
     "Plant fiber": "Растительные волокна",
     "Primitive Axe": "Примитивный топор",
+    "Primitive Cooking Pot": "Примитивный Котелок",
     "Primitive Crucible and Stick": "Примитивный тигель и палка",
     "Primitive Fishing Pole": "Примитивная удочка",
     "Primitive Hammer": "Примитивный молот",
@@ -39,7 +43,11 @@
     "Primitive shovel": "Примитивная лопата",
     "Primitive sickle": "Примитивный серп",
     "Rock": "Камень",
+    "Simple rope": "Простая верёвка",
+    "Sleeping Bag": "Спальный мешок",
+    "Sling": "Sling",
     "Torch": "Факел",
-    "Water": "Вода"
+    "Water": "Вода",
+    "Wooden Fence": "Деревянная Изгородь"
   }
 }
