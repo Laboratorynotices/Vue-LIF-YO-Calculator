@@ -6,7 +6,7 @@ import type { MenuAndRouteElement, RouterLink } from "./types";
  */
 const menuElements: Array<MenuAndRouteElement> = [
   {
-    path: "/",
+    path: "",
     name: "qualityCalculator",
     component: () => import("@/views/QualityCalculatorView.vue"),
     meta: { title: "qualityCalculator" },
@@ -14,7 +14,7 @@ const menuElements: Array<MenuAndRouteElement> = [
     showInMenu: true,
   },
   {
-    path: "/home",
+    path: "home",
     name: "home",
     component: () => import("@/views/HomeView.vue"),
     meta: { title: "Home" },
@@ -22,7 +22,7 @@ const menuElements: Array<MenuAndRouteElement> = [
     showInMenu: false,
   },
   {
-    path: "/about",
+    path: "about",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

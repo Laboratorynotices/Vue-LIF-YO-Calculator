@@ -1,14 +1,23 @@
+import { languageSwitcher } from '@/i18n/languageSwitcherClass';
 import { routes } from '@/menu-elements'
 import {
   createRouter,
   createWebHistory,
   type NavigationGuardNext,
-  type RouteLocationNormalized
+  type RouteLocationNormalized,
+  RouterView
 } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: routes
+  routes: [
+    {
+      path: "/:locale?",
+      component: RouterView,
+      beforeEnter: languageSwitcher.routeMiddleware,
+      children: routes
+    }
+  ]
 });
 
 /**
@@ -17,11 +26,13 @@ const router = createRouter({
 router.beforeEach(
   (
     to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
+    _from: RouteLocationNormalized,
     next: NavigationGuardNext
   ): void => {
+    // Меняем мета-заголовок страницы
     document.title =
       (to.meta.title ? to.meta.title + " -- " : "") + "Калькулятор качества производства LIF YO.";
+    // Переходим к следующему правилу
     next();
   }
 );

@@ -4,7 +4,6 @@ import router from './router';
 
 // Настройка мультиязычности
 import { i18n } from '@/i18n';
-import { languageSwitcher } from './i18n/languageSwitcherClass';
 
 // Vuetify
 import 'vuetify/styles';
@@ -16,9 +15,6 @@ const vuetify = createVuetify({
   components,
   directives,
 });
-
-// Инициализация языка по умолчанию
-languageSwitcher.initDefaultLocale();
 
 const app = createApp(App);
 
