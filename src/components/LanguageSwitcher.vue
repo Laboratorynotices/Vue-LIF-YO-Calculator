@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { languageSwitcher } from "@/i18n/languageSwitcherClass";
-import { watch } from "vue";
 import { ref, type Ref } from "vue";
 import { useRouter } from "vue-router";
 
@@ -11,6 +10,7 @@ const selectedLanguage: Ref<string> = ref(languageSwitcher.actualLocale);
 
 /**
  * Экземпляр маршрутизатора.
+ * useRouter() может запускаться лишь внутри vue-файлов.
  */
 const router = useRouter();
 
@@ -29,18 +29,6 @@ const replaceLocale = () => {
     router.push("/");
   }
 };
-
-/**
- * Наблюдаем за глобальным состоянием выбранного языка.
- * Может поменяться после "установки" этого компонента,
- * а computed в данном случае изменение не замечает.
- */
-watch(
-  () => languageSwitcher.actualLocale,
-  (newLocale: string) => {
-    selectedLanguage.value = newLocale;
-  }
-);
 </script>
 
 <template>
