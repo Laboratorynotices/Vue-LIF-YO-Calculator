@@ -4,6 +4,7 @@ import {
 } from "vue-router";
 import { i18n } from ".";
 import { appLanguageConfig } from "./appLanguageConfigClass";
+import { nextTick } from "vue";
 
 /**
  * Переключение языков.
@@ -14,14 +15,6 @@ export class languageSwitcher {
    */
   public static get actualLocale(): string {
     return i18n.global.locale.value;
-  }
-
-  /**
-   * Задаёт актуальное значение языка
-   */
-  public static set actualLocale2(newLocale:string) {
-    // Переключаем язык на сайте
-    i18n.global.locale.value = newLocale;
   }
 
   /**
@@ -39,10 +32,30 @@ export class languageSwitcher {
   }
 
   /**
+   * Загружаем перевод для выбранной локали
+   */
+  public static async loadLocaleMessages(locale: string) {
+    // Вначале проверяем надо ли этот пакет переводов загружать.
+    if(!i18n.global.availableLocales.includes(locale)) {
+      // Этого перевода не нашлось в списке доступных.
+      // Загружаем файл с переводами.
+      const messages = await import(`@/i18n/locales/${locale}.json`);
+      // Инициализируем загруженные переводы
+      i18n.global.setLocaleMessage(locale, messages.default);
+    }
+
+    // даём знать, что выполнение завершено
+    return nextTick();
+  }
+
+  /**
    * Вызывается при изменении значения переключателя языка.
    * @param newLocale строчка с кодом языка
    */
-  public static switchLocale(newLocale: string): void {
+  public static async switchLocale(newLocale: string): Promise<void> {
+    // Если надо, то подгружаем файл с переводом.
+    await this.loadLocaleMessages(newLocale);
+
     // Задаёт новое значение для актуального языка
     this.actualLocale = newLocale;
   }
