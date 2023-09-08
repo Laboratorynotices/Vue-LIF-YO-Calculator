@@ -136,7 +136,7 @@ export class appLanguageConfig {
    */
   private static get userLocale(): string | null {
     // Считываем данные из браузера
-    let locale = window.navigator.language ||
+    let locale: string = window.navigator.language ||
       // @ts-ignore
       window.navigator.userLanguage;
 
@@ -151,5 +151,21 @@ export class appLanguageConfig {
 
     // Прочитанное значение не прошло проверку или было пустым
     return null;
+  }
+
+  /**
+   * Динамичная загрузка языкового пакета "по умолчанию"
+   */
+  public static async initializeDefaultMessage() {
+    // Определяемся с языком по умолчанию для этого пользователя.
+    const defaultLocale: string = this.suggestDefaultLanguage();
+
+    // Загружаем нужный файл с переводами.
+    const messagesJSON = await import(`./locales/${defaultLocale}.json`);
+
+    // возвращаем лишь нужную языковую связку
+    return {
+      [defaultLocale]: messagesJSON.default
+    };
   }
 }
