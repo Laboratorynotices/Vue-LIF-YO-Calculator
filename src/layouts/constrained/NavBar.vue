@@ -6,7 +6,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 </script>
 
 <template>
-  <v-app-bar flat>
+  <v-app-bar>
     <v-container class="mx-auto d-flex align-center justify-center">
       <nav-bar-avatar></nav-bar-avatar>
 
