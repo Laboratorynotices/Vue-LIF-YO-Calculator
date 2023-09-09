@@ -20,6 +20,7 @@
     "Artisan": "Ремёсла",
     "Bark": "Кора",
     "Bark Box": "Туесок",
+    "Billets": "Поленья",
     "Boards": "Доски",
     "Branch": "Ветка",
     "Campfire": "Костёр",
@@ -31,6 +32,7 @@
     "Furnace": "Плавильная печь",
     "Milk": "Молоко",
     "Mortar and pestle": "Ступка с пестиком",
+    "Palisade Wall": "Частокол",
     "Plant fiber": "Растительные волокна",
     "Primitive Axe": "Примитивный топор",
     "Primitive Cooking Pot": "Примитивный Котелок",
@@ -48,6 +50,8 @@
     "Sling": "Sling",
     "Torch": "Факел",
     "Water": "Вода",
-    "Wooden Fence": "Деревянная Изгородь"
+    "Wattle Fence": "Плетень",
+    "Wooden Fence": "Деревянная Изгородь",
+    "Wooden Wicket": "Деревянная Калитка"
   }
 }

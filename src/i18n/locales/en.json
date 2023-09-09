@@ -20,6 +20,7 @@
     "Artisan": "Artisan",
     "Bark": "Bark",
     "Bark Box": "Bark Box",
+    "Billets": "Billets",
     "Boards": "Boards",
     "Branch": "Branch",
     "Campfire": "Campfire",
@@ -31,6 +32,7 @@
     "Furnace": "Furnace",
     "Milk": "Milk",
     "Mortar and pestle": "Mortar and pestle",
+    "Palisade Wall": "Palisade Wall",
     "Plant fiber": "Plant fiber",
     "Primitive Axe": "Primitive axe",
     "Primitive Cooking Pot": "Primitive Cooking Pot",
@@ -48,6 +50,8 @@
     "Sling": "Sling",
     "Torch": "Torch",
     "Water": "Water",
-    "Wooden Fence": "Wooden Fence"
+    "Wattle Fence": "Wattle Fence",
+    "Wooden Fence": "Wooden Fence",
+    "Wooden Wicket": "Wooden Wicket"
   }
 }
