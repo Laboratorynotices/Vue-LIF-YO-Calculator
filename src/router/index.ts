@@ -2,14 +2,14 @@ import { languageSwitcher } from '@/i18n/languageSwitcherClass';
 import { routes } from '@/menu-elements'
 import {
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
   type NavigationGuardNext,
   type RouteLocationNormalized,
   RouterView
 } from 'vue-router';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/:locale?",
