@@ -7,6 +7,7 @@ import {
   type RouteLocationNormalized,
   RouterView
 } from 'vue-router';
+import { i18n } from "@/i18n";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -31,7 +32,9 @@ router.beforeEach(
   ): void => {
     // Меняем мета-заголовок страницы
     document.title =
-      (to.meta.title ? to.meta.title + " -- " : "") + "Калькулятор качества производства LIF YO.";
+      (to.meta.title ?
+        i18n.global.t("navigation."+to.meta.title) + " -- " : "") +
+        i18n.global.t("navigation.LIF-YO-production-quality-calculator");
     // Переходим к следующему правилу
     next();
   }

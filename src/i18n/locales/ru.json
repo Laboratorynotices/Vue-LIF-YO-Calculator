@@ -14,7 +14,8 @@
   "navigation": {
     "About": "О приложении",
     "qualityCalculator": "Калькулятор",
-    "Home": "Главная"
+    "Home": "Главная",
+    "LIF-YO-production-quality-calculator": "Калькулятор качества производства LIF YO."
   },
   "game": {
     "Artisan": "Ремёсла",

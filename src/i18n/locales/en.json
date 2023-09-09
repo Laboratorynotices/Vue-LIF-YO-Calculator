@@ -14,7 +14,8 @@
   "navigation": {
     "About": "About",
     "qualityCalculator": "Calculator",
-    "Home": "Home"
+    "Home": "Home",
+    "LIF-YO-production-quality-calculator": "LIF YO production quality calculator."
   },
   "game": {
     "Artisan": "Artisan",
