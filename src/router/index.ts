@@ -1,4 +1,4 @@
-import { languageSwitcher } from '@/i18n/languageSwitcherClass';
+//import { languageSwitcher } from '@/i18n/languageSwitcherClass';
 import { routes } from '@/menu-elements'
 import {
   createRouter,
@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: "/:locale?",
       component: RouterView,
-      beforeEnter: languageSwitcher.routeMiddleware,
+      //beforeEnter: languageSwitcher.routeMiddleware,
       children: routes
     }
   ]
@@ -30,13 +30,17 @@ router.beforeEach(
     _from: RouteLocationNormalized,
     next: NavigationGuardNext
   ): void => {
-    // Меняем мета-заголовок страницы
-    document.title =
-      (to.meta.title ?
-        i18n.global.t("navigation."+to.meta.title) + " -- " : "") +
-        i18n.global.t("navigation.LIF-YO-production-quality-calculator");
-    // Переходим к следующему правилу
-    next();
+    // При самом первом запуске ещё не подгружен ни один файл для перевода.
+    // Значит нечего переводить.
+    if (i18n.global.availableLocales.length > 1) {
+      // Меняем мета-заголовок страницы
+      document.title =
+        (to.meta.title ?
+          i18n.global.t("navigation."+to.meta.title) + " -- " : "") +
+          i18n.global.t("navigation.LIF-YO-production-quality-calculator");
+      // Переходим к следующему правилу
+      next();
+    };
   }
 );
 

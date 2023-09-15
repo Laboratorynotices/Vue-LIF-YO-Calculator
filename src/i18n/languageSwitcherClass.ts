@@ -5,6 +5,7 @@ import {
 import { i18n } from ".";
 import { appLanguageConfig } from "./appLanguageConfigClass";
 import { nextTick } from "vue";
+import router from "@/router";
 
 /**
  * Переключение языков.
@@ -61,6 +62,31 @@ export class languageSwitcher {
   }
 
   /**
+   * Предполагает на каком языке пользователь хочет увидеть страницу,
+   * а потом загружает соответствующий файл.
+   */
+  public static async loadingFirstLocale(): Promise<boolean> {
+    // Определяемся с языком по умолчанию для этого пользователя.
+    const defaultLocale: string = appLanguageConfig.suggestDefaultLanguage();
+
+    // Подгружаем файл с переводом.
+    await this.loadLocaleMessages(defaultLocale);
+
+    // Задаёт новое значение для актуального языка
+    this.actualLocale = defaultLocale;
+
+    // Пытаемся обновить локаль в адресе страницы
+    try {
+      router.replace({ params: { locale: defaultLocale }})
+    } catch (error) {
+      console.error(error);
+      router.push("/");
+    }
+
+    return true;
+  }
+
+  /**
    * V-select от Vuetify требует подготовленного
    * списка для вводных данных,
    * чтобы значения списка отличались от надписей.
@@ -105,6 +131,8 @@ export class languageSwitcher {
    * Некоторые методы смогли запуститься,
    * лишь "снаружи" класса,
    * вот и пришлось сделать их публичными.
+   * 
+   * Кандидат на удаление.
    */
   public static routeMiddleware(
     to: RouteLocationNormalized,
