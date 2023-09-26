@@ -396,6 +396,211 @@
         "toolWeight": 5
       },
       {
+        "name": "Tiny shack",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/93/Tiny_shack.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 20,
+            "weight": 15
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden Wall with Stairs",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/73/Wooden_wall_with_stairs.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Billets",
+            "quantity": 20,
+            "weight": 40
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 10,
+            "weight": 5
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 10,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          },
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Gates",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/b/bd/Wooden_gates.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Building Log",
+            "quantity": 20,
+            "weight": 20
+          },
+          {
+            "name": "Boards",
+            "quantity": 6,
+            "weight": 40
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 20,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Palisade Wall (diagonal)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/1/17/Palisade_wall.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 65
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Fence (diagonal)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/3a/Wooden_fence.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 55
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 10,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wattle Fence (diagonal)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/e5/Wattle_fence.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Branch",
+            "quantity": 10,
+            "weight": 65
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Plaster tiny shack",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/ae/Plaster_tiny_shack.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 30
+          },
+          {
+            "name": "Clay",
+            "quantity": 80,
+            "weight": 20
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 20,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Pillar",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/4/42/Wooden_pillar.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Building Log",
+            "quantity": 2,
+            "weight": 40
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden Pillar",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/d/d8/Wooden_pillar2.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Building Log",
+            "quantity": 2,
+            "weight": 40
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden Well",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/92/Well_B.png",
+        "minLevel": 0,        
+        "materials": [
+          {
+            "name": "Building Log",
+            "quantity": 4,
+            "weight": 30
+          },
+          {
+            "name": "Boards",
+            "quantity": 10,
+            "weight": 20
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 10,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 10
+      },
+
+
+      {
         "name": "Brewing Tank",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ee/Brewing_tank.png",
         "minLevel": 60,        
@@ -406,7 +611,7 @@
             "weight": 5
           },
           {
-            "name": "Hard Boards",
+            "name": "Hardwood board",
             "quantity": 4,
             "weight": 15
           },
