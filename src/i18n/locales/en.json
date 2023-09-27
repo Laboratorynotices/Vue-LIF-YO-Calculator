@@ -3,14 +3,18 @@
     "en": "English",
     "ru": "Russian"
   },
+  "Device": "Device",
   "Level of clothing": "Level of clothing",
   "Level of item": "Level of item",
   "Level of skill": "Level of skill",
   "Level of tool": "Level of tool",
   "Level of workbench": "Level of workbench",
+  "Influence": "Influence",
   "Is primitive tool?": "Is primitive tool?",
   "Has workbench bonus?": "Has workbench bonus?",
+  "Required": "Required",
   "This will not be translated": "This will not be translated.",
+  "Tool": "Tool",
   "navigation": {
     "About": "About",
     "qualityCalculator": "Calculator",

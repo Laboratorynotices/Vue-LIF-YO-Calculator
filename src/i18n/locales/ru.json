@@ -3,14 +3,18 @@
     "en": "Английский",
     "ru": "Русский"
   },
+  "Device": "Устройство",
   "Level of clothing": "Уровень одежды",
   "Level of item": "Уровень предмета",
   "Level of skill": "Уровень навыка",
   "Level of tool": "Уровень инструментов",
   "Level of workbench": "Уровень верстака",
+  "Influence": "Влияние",
   "Is primitive tool?": "Примитивный инструмент",
   "Has workbench bonus?": "Бонус верстака",
+  "Required": "Требуется",
   "This will not be translated": "Это не будет переведено.",
+  "Tool": "Инструмент",
   "navigation": {
     "About": "О приложении",
     "qualityCalculator": "Калькулятор",

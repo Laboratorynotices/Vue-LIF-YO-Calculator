@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Recipe } from "@/types";
-import ShowMaterialInfo from "./ShowMaterialInfo.vue"
+import CardRecipePopover from "./CardRecipePopover.vue";
+import ShowMaterialInfo from "./ShowMaterialInfo.vue";
 import { computed, onMounted, ref, type Ref } from "vue";
 
 // Данные, теперь получаем от "родительского" элемента
@@ -231,6 +232,7 @@ onMounted(() => {
           // @ts-ignore
           $t("game."+props.recipe?.name)
         }} {{ quality }}
+        <card-recipe-popover :recipe="props.recipe"></card-recipe-popover>
       </v-card-title>
     </v-card-item>
 
