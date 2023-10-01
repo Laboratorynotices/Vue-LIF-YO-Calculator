@@ -598,8 +598,326 @@
         ],
         "toolWeight": 10
       },
-
-
+      {
+        "name": "Big cauldron",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/92/Big_cauldron.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Metal sheet",
+            "quantity": 1,
+            "weight": 50
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 4,
+            "weight": 10
+          },
+          {
+            "name": "Branch",
+            "quantity": 10,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Kiln",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/5/58/Kiln.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Water",
+            "quantity": 40,
+            "weight": 5
+          },
+          {
+            "name": "Clay",
+            "quantity": 250,
+            "weight": 50
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 30,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 0
+      },
+      {
+        "name": "Forge and anvil",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/c/cf/Forge_and_anvil.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Shaped rock",
+            "quantity": 30,
+            "weight": 10
+          },
+          {
+            "name": "Clay",
+            "quantity": 20,
+            "weight": 10
+          },
+          {
+            "name": "Hardwood billet",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Anvil",
+            "quantity": 1,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Oven",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/4/46/Oven.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Clay",
+            "quantity": 250,
+            "weight": 20
+          },
+          {
+            "name": "Metal sheet",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Mortar",
+            "quantity": 5,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Beehive",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/3c/Beehive.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 2,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 45,
+            "weight": 10
+          },
+          {
+            "name": "Straw",
+            "quantity": 10,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Coop",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/4/48/Coop.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 30,
+            "weight": 40
+          },
+          {
+            "name": "Plant fiber",
+            "quantity": 10,
+            "weight": 10
+          },
+          {
+            "name": "Nails",
+            "quantity": 60,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Training field",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/8/8f/Training_field.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Nails",
+            "quantity": 20,
+            "weight": 5
+          },
+          {
+            "name": "Boards",
+            "quantity": 40,
+            "weight": 45
+          },
+          {
+            "name": "Linen rope",
+            "quantity": 2,
+            "weight": 5
+          },
+          {
+            "name": "Building log",
+            "quantity": 1,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden stairs",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/c/c7/Wooden_Ladder.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 2,
+            "weight": 30
+          },
+          {
+            "name": "Softwood board",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Wooden Wall (diagonal)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall (diagonal, loophole)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall defences",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 10,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 20,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall (loophole)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall with Stairs (loophole)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden Wall square",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/9/9f/Wooden_wall.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Boards",
+            "quantity": 3,
+            "weight": 20
+          },
+          {
+            "name": "Billets",
+            "quantity": 15,
+            "weight": 45
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Wooden canopy",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/f/fc/Wooden_canopy.png",
+        "minLevel": 30,        
+        "materials": [
+          {
+            "name": "Nails",
+            "quantity": 40,
+            "weight": 20
+          },
+          {
+            "name": "Boards",
+            "quantity": 20,
+            "weight": 40
+          }
+        ],
+        "toolWeight": 10
+      },
       {
         "name": "Brewing Tank",
         "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ee/Brewing_tank.png",
@@ -627,7 +945,437 @@
           }
         ],
         "toolWeight": 5
+      },
+      {
+        "name": "Small Stable",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/0/0a/Small_stable.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building log",
+            "quantity": 10,
+            "weight": 20
+          },
+          {
+            "name": "Rock",
+            "quantity": 100,
+            "weight": 20
+          },
+          {
+            "name": "Straw",
+            "quantity": 50,
+            "weight": 10
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 4,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Small Plaster house",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/e0/Small_plaster_house.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building log",
+            "quantity": 30,
+            "weight": 10
+          },
+          {
+            "name": "Mortar",
+            "quantity": 30,
+            "weight": 20
+          },
+          {
+            "name": "Door module",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Window module",
+            "quantity": 4,
+            "weight": 10
+          },
+          {
+            "name": "Clay",
+            "quantity": 150,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Small Wooden House",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/f/f1/Small_wooden_house.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building log",
+            "quantity": 100,
+            "weight": 30
+          },
+          {
+            "name": "Nails",
+            "quantity": 200,
+            "weight": 10
+          },
+          {
+            "name": "Door module",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Window module",
+            "quantity": 4,
+            "weight": 5
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 60,
+            "weight": 5
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Lamp Post",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/b/b1/Lamppost.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Lamp",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Naphtha",
+            "quantity": 10,
+            "weight": 30
+          },
+          {
+            "name": "Linen rope",
+            "quantity": 1,
+            "weight": 10
+          },
+          {
+            "name": "Building log",
+            "quantity": 1,
+            "weight": 10
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Sign",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/5/5d/Sign.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building log",
+            "quantity": 1,
+            "weight": 30
+          },
+          {
+            "name": "Nails",
+            "quantity": 5,
+            "weight": 10
+          },
+          {
+            "name": "Boards",
+            "quantity": 3,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Big Wooden Canopy",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/1/13/Big_wooden_canopy.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Nails",
+            "quantity": 70,
+            "weight": 20
+          },
+          {
+            "name": "Boards",
+            "quantity": 40,
+            "weight": 40
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Stairs",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/6/63/Ladder.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 20,
+            "weight": 30
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 30,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 30,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Palisade shield",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/b/b9/Palisade_shield.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building logs",
+            "quantity": 3,
+            "weight": 45
+          },
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Palisade shield (loophole)",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/78/Palisade_wall_diagonal.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Building logs",
+            "quantity": 3,
+            "weight": 45
+          },
+          {
+            "name": "Boards",
+            "quantity": 5,
+            "weight": 20
+          }
+        ],
+        "toolWeight": 5
+      },
+      {
+        "name": "Short Hardwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ea/Short_hardwood_pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 2,
+            "weight": 30
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 2,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Hardwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/6/65/Hardwood_pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 4,
+            "weight": 30
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 2,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Tall Hardwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/e7/Tall_Hardwood_Pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 6,
+            "weight": 30
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Short Softwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/d/de/Short_softwood_pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 2,
+            "weight": 30
+          },
+          {
+            "name": "Softwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 2,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Softwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/73/Softwood_pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 4,
+            "weight": 30
+          },
+          {
+            "name": "Softwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 2,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Tall Softwood Pillars",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/e/ea/Tall_Softwood_Pillar.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 6,
+            "weight": 30
+          },
+          {
+            "name": "Softwood board",
+            "quantity": 1,
+            "weight": 20
+          },
+          {
+            "name": "Nails",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Small platform",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/3/37/Small_Platform.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Hardwood billet",
+            "quantity": 6,
+            "weight": 30
+          },
+          {
+            "name": "Softwood billet",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Cross platform",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/a/ad/Cross_Platform.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 6,
+            "weight": 30
+          },
+          {
+            "name": "Softwood board",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
+      },
+      {
+        "name": "Platform",
+        "src": "https://static.wikia.nocookie.net/lifeisfeudal_gamepedia/images/7/7d/Platform.png",
+        "minLevel": 60,        
+        "materials": [
+          {
+            "name": "Softwood billet",
+            "quantity": 6,
+            "weight": 30
+          },
+          {
+            "name": "Hardwood board",
+            "quantity": 4,
+            "weight": 20
+          },
+          {
+            "name": "Simple rope",
+            "quantity": 4,
+            "weight": 30
+          }
+        ],
+        "toolWeight": 10
       }
+
     ]
   },
   {
