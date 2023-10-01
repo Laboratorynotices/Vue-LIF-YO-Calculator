@@ -4,6 +4,7 @@
     "ru": "Russian"
   },
   "Device": "Device",
+  "Level of baromsag": "Level of basormag",
   "Level of clothing": "Level of clothing",
   "Level of item": "Level of item",
   "Level of skill": "Level of skill",
@@ -11,13 +12,18 @@
   "Level of workbench": "Level of workbench",
   "Influence": "Influence",
   "Is primitive tool?": "Is primitive tool?",
+  "Material Stack Size": "Stack Size of the Material",
   "Has workbench bonus?": "Has workbench bonus?",
   "Required": "Required",
+  "Result": "Result",
+  "Result Material Level": "Result Level of the Material",
+  "Start level of item": "Start level of item",
   "This will not be translated": "This will not be translated.",
   "Tool": "Tool",
   "navigation": {
     "About": "About",
     "qualityCalculator": "Calculator",
+    "baromsagCalculator": "Baromsag",
     "Home": "Home",
     "LIF-YO-production-quality-calculator": "LIF YO production quality calculator."
   },

@@ -14,6 +14,14 @@ const menuElements: Array<MenuAndRouteElement> = [
     showInMenu: true,
   },
   {
+    path: "baromsagCalculator",
+    name: "baromsagCalculator",
+    component: () => import("@/views/BaromsagCalculatorView.vue"),
+    meta: { title: "baromsagCalculator" },
+    nameMenu: "baromsagCalculator",
+    showInMenu: true,
+  },
+  {
     path: "home",
     name: "home",
     component: () => import("@/views/HomeView.vue"),

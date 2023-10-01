@@ -4,6 +4,7 @@
     "ru": "Русский"
   },
   "Device": "Устройство",
+  "Level of baromsag": "Уровень Баромсага",
   "Level of clothing": "Уровень одежды",
   "Level of item": "Уровень предмета",
   "Level of skill": "Уровень навыка",
@@ -11,13 +12,18 @@
   "Level of workbench": "Уровень верстака",
   "Influence": "Влияние",
   "Is primitive tool?": "Примитивный инструмент",
+  "Material Stack Size": "Размер кучки материала",
   "Has workbench bonus?": "Бонус верстака",
   "Required": "Требуется",
+  "Result": "Результат",
+  "Result Material Level": "Нужный уровень результата",
+  "Start level of item": "Начальный уровень предмета",
   "This will not be translated": "Это не будет переведено.",
   "Tool": "Инструмент",
   "navigation": {
     "About": "О приложении",
     "qualityCalculator": "Калькулятор",
+    "baromsagCalculator": "Баромсаг",
     "Home": "Главная",
     "LIF-YO-production-quality-calculator": "Калькулятор качества производства LIF YO."
   },
